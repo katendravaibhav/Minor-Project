@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="myappy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Microphone Control</title>
+
+    <!-- Angular and Dependencies -->
+    <script src="assets/js/lib/jquery-3.1.1.min.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="assets/js/controllers/LabCtrl.js"></script>
+
+    <!-- Custom Styling -->
+    <style>
+        body {
+            background: #f0f2f5;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .mic-control {
+            margin: 30px auto;
+            padding: 20px;
+            width: 60%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+
+        .mic-control button {
+            margin: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .mic-control button:disabled {
+            background: #999;
+        }
+
+        .mic-control button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body ng-controller="LabCtrl">
+    <h1>Microphone Control</h1>
+    <div class="mic-control">
+        <button class="action-btn" ng-click="startMic()">Start Mic</button>
+        <button class="action-btn" ng-click="stopMic()">Stop Mic</button>
+    </div>
+</body>
+
+</html>
